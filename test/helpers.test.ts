@@ -14,12 +14,12 @@ describe('Helpers', () => {
     context = i18n.createContext('ru', {})
   })
 
-  it('reply', () => {
+  it('reply', async () => {
     let resourceKey = 'button.help'
     let extra = {}
     let fn = reply(resourceKey, extra)
     let spy = jest.fn()
-    fn({ i18n: context, reply: spy })
+    await fn({ i18n: context, reply: spy } as any)
     expect(spy).toBeCalled()
     expect(spy).toBeCalledWith(context.t(resourceKey), extra)
   })

@@ -1,6 +1,7 @@
 import * as fs from 'fs'
 import * as yaml from 'js-yaml'
 import * as path from 'path'
+import { Context } from 'telegraf'
 import { Config, I18nContext } from './context'
 
 const compile = require('compile-template')
@@ -58,7 +59,7 @@ export class I18n {
   }
 
   middleware() {
-    return (ctx: { i18n: I18nContext; [key: string]: any }, next: () => Promise<any>) => {
+    return (ctx: Context & { i18n: I18nContext; [key: string]: any }, next: () => Promise<any>) => {
       const session = this.config.useSession && ctx[this.config.sessionName]
       const languageCode =
         (session && session.__language_code) || (ctx.from && ctx.from.language_code)

@@ -55,8 +55,8 @@ export function pluralize(languageCode: string) {
     console.warn(`i18n::Pluralize: Unsupported language ${languageCode}`)
     key = 'english'
   }
-  return (number: number, ...forms: string[]) =>
-    `${number} ${forms[pluralRules[key as string](number)]}`
+  return (count: number, ...forms: string[]) =>
+    `${count} ${forms[pluralRules[key as string](count)]}`
 }
 
 export function plural(languageCode: string) {
@@ -66,5 +66,5 @@ export function plural(languageCode: string) {
     console.warn(`i18n::Pluralize: Unsupported language ${languageCode}`)
     key = 'english'
   }
-  return (number: number, ...forms: string[]) => `${forms[pluralRules[key as string](number)]}`
+  return (count: number, ...forms: string[]) => `${forms[pluralRules[key as string](count)]}`
 }

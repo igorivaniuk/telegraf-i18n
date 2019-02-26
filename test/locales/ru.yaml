@@ -1,0 +1,9 @@
+command:
+  start: |
+    Привет ${from.id}
+button:
+  settings: Настройки
+  help: Помощь
+
+plural: |
+  ${plural(count, 'Найден', 'Найдено', 'Найдено')} ${pluralize(count, 'пользователь', 'пользователя', 'пользователeй')}

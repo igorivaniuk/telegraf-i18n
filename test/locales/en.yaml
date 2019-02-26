@@ -1,0 +1,9 @@
+command:
+  start: |
+    Hello ${from.id}
+button:
+  settings: Settings
+  help: Help
+
+plural: |
+  Found ${pluralize(count, 'user', 'users')}

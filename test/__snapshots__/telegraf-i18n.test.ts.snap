@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`I18n create  1`] = `
+Object {
+  "en": Object {
+    "button": Object {
+      "help": [Function],
+      "settings": [Function],
+    },
+    "command": Object {
+      "start": [Function],
+    },
+    "plural": [Function],
+  },
+  "ru": Object {
+    "button": Object {
+      "help": [Function],
+      "settings": [Function],
+    },
+    "command": Object {
+      "start": [Function],
+    },
+    "plural": [Function],
+  },
+}
+`;
+
+exports[`I18n resetLocale 1`] = `
+Object {
+  "en": Object {
+    "button": Object {
+      "help": [Function],
+      "settings": [Function],
+    },
+    "command": Object {
+      "start": [Function],
+    },
+    "plural": [Function],
+  },
+}
+`;
+
+exports[`I18n resetLocale 2`] = `Object {}`;

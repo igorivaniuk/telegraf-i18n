@@ -1,4 +1,4 @@
-import { ContextMessageUpdate } from 'telegraf'
+import { SceneContextMessageUpdate } from 'telegraf/typings/stage'
 import { ExtraReplyMessage } from 'telegraf/typings/telegram-types'
 import { I18nContext } from './context'
 import { I18n } from './i18n'
@@ -10,7 +10,7 @@ function match(resourceKey: string, templateData?: object) {
 }
 
 function reply(resourceKey: string, extra: ExtraReplyMessage) {
-  return ({ reply, i18n }: ContextMessageUpdate & { i18n: I18nContext }) =>
+  return ({ reply, i18n }: SceneContextMessageUpdate & { i18n: I18nContext }) =>
     reply(i18n.t(resourceKey), extra)
 }
 
